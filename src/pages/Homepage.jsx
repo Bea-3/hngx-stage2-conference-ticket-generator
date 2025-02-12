@@ -11,7 +11,7 @@ const Homepage = () => {
     <div className='conatiner w-max-[1200px] min-h-full border-red-600 border-2'> 
        <Navbar/>
       
-      <h2 className="text-3xl font-bold">Homepage Ticketing</h2>
+      <SelectTicket/>
 
     </div>
   )
