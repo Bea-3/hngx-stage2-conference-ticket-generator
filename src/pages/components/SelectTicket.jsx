@@ -1,7 +1,9 @@
 import React from 'react';
 import { Progressbar } from './Progressbar';
+import { Button } from './Button';
 
-const SelectTicket = () => {
+// passing props 
+const SelectTicket = ( {nextStep}) => {
   return (
     <div className='w-[700px] border-2 border-pink-200 mx-auto my-11 p-8'>
       {/* heading */}
@@ -9,6 +11,14 @@ const SelectTicket = () => {
         <h2 className='font-[Jejumyeongjo] text-[32px]'>Ticket Selection</h2>
         <p className='flex'>Step<span className='ml-1'>1</span>/3</p>
       </div>
+      <form>
+        <p>YES</p>
+        <div>
+          {/* on cancel, clear the form data */}
+        <Button className='border-white border-2'>Cancel</Button>
+        <Button className='border-white border-2' onClick={nextStep}>Next</Button>
+        </div>
+      </form>
     </div>
   )
 }
