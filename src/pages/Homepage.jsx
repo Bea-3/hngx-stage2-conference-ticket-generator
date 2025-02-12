@@ -1,11 +1,17 @@
 import React from 'react';
-import { SelectTicket } from './components/SelectTicket';
-import { AttendeeDetails } from './components/AttendeeDetails';
-import { BookedTicket } from './components/BookedTicket';
+import { useState } from 'react';
+import Navbar from './components/Navbar';
+import SelectTicket from './components/SelectTicket';
+import BookedTicket from './components/BookedTicket';
+import AttendeeDetails from './components/AttendeeDetails';
 
 const Homepage = () => {
+
   return (
-    <div> <h2 className="text-3xl font-bold text-tahiti">Homepage Ticketing</h2>
+    <div className='conatiner w-max-[1200px] min-h-full border-red-600 border-2'> 
+       <Navbar/>
+      
+      <h2 className="text-3xl font-bold">Homepage Ticketing</h2>
 
     </div>
   )

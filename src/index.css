@@ -1,10 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Road+Rage&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://db.onlinewebfonts.com/c/1a5c2d8bbd4e28d99a6efcbb9a5b378f?family=JejuMyeongjo');
 @import "tailwindcss";
 
 @theme {
-  --color-midnight: #121063;
-  --color-tahiti: #3ab7bf;
-  --color-bermuda: #78dcca;
+  --color-bgDarkgreen: #041E23;
+  --color-bgLightGreen: #0E464F;
+  --color-bgRingGreen: #197686;
+  --color-bgInputLightGreen: #2BA4B9;
+  --color-btnGreen: #24A0B5;
+  --color-textDark: #0A0C11;
+  --color-primaryBackground: #02191D;
 }
 
 * {
@@ -12,7 +17,7 @@
 }
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Roboto, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-style: normal;
   font-optical-sizing: auto;
   font-synthesis: none;
@@ -23,11 +28,11 @@
 
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  border: 1px solid red;
+  margin: 0 auto;
+  background-color: #02191D;
+  color:white;
 }
 
+a {
+  text-decoration: none;
+}
