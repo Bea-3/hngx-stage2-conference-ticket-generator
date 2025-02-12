@@ -19,7 +19,7 @@ export const TicketOptions = ({ setSelectedTicket} ) => {
     <div className='border-1 border-bgLightGreen p-4 rounded-3xl flex flex-wrap gap-6 mt-2'>
       {/* 3 cards with the ticket types */}
       { ticketType.map( (ticket) => (
-        <button 
+        <button type='button'
         key={ticket.type}
         onClick={() => handleSelect(ticket)}
         className={`border-1 border-bgLightGreen flex p-2 w-[242px] gap-2  ${ selected === ticket.type ? 'bg-bgRingGreen' : 'bg-inherit'} rounded-2xl justify-between items-start active:bg-bgRingGreen`}>
