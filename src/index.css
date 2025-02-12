@@ -10,6 +10,8 @@
   --color-btnGreen: #24A0B5;
   --color-textDark: #0A0C11;
   --color-primaryBackground: #02191D;
+  --color-formBg: #08252B;
+  --color-formHeadingBg: #07373F;
 }
 
 * {
@@ -23,6 +25,7 @@
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
   
 }
 
