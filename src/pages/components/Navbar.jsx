@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../../assets/ticz-logo.svg';
 import rightArrow from '../../assets/icons/right-arrow.svg';
-import { Button } from './Button';
+import { Button } from './utils/Button';
 
 const Navbar = () => {
   const handleButtonClick = () => {

@@ -1,17 +1,20 @@
 import React from 'react'
-import { Button } from './Button';
+import { StepsContainer } from './StepsContainer';
+import { Button } from './utils/Button';
 
-const BookedTicket = ( {prevStep}) => {
+const BookedTicket = ( {resetForm, step, totalSteps}) => {
   return (
-    <div>BookedTicket
-
-      <div>
-                    
-                    {/* return to select ticket on click */}
-        <Button className='border-white border-2' onClick={() => prevStep(1)}>Book Another Ticket</Button>
-        <Button className='border-white border-2'>Download Ticket</Button>
-        </div>
-    </div>
+    <StepsContainer title="Ready" step={step} totalSteps={totalSteps}>
+          <form>
+          <div className='flex justify-between mt-4'>
+            <Button className='border-white border-2' onClick={resetForm}>Book Another Ticket
+            </Button>
+            <Button className='border-white border-2'>
+            Download Ticket
+            </Button>
+          </div>
+          </form>
+        </StepsContainer>
   )
 }
 
