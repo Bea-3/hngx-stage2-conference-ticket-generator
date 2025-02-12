@@ -15,7 +15,10 @@ const Homepage = () => {
 
   const nextStep = () => setStep( (prev) => prev + 1);
   const prevStep = () => setStep ( () => prev - 1);
-  const resetForm = () => setStep(1);
+  const resetForm = () => {
+    localStorage.clear();
+    setStep(1); // Reset to Step 1
+  };
   return (
     <div className='conatiner w-max-[1200px] min-h-full border-red-600 border-2'> 
        <Navbar/>
