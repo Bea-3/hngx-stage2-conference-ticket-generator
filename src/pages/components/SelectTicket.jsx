@@ -88,7 +88,7 @@ const SelectTicket = ( { nextStep, step, totalSteps }) => {
             <div className='font-[Roboto] flex justify-center items-center gap-3 my-3'>
               <div className='flex gap-2'>
                
-                <p>[Event Location]</p>
+                <p>📍 [Event Location]</p>
               </div>
               ||
               <div className='flex gap-2'>

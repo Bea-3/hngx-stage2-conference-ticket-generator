@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Road+Rage&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alatsi&family=Road+Rage&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://db.onlinewebfonts.com/c/1a5c2d8bbd4e28d99a6efcbb9a5b378f?family=JejuMyeongjo');
 @import "tailwindcss";
 
@@ -12,6 +12,7 @@
   --color-primaryBackground: #02191D;
   --color-formBg: #08252B;
   --color-formHeadingBg: #07373F;
+  --color-bgdarkBorder:#133D44;
 }
 
 * {
@@ -38,4 +39,8 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.ticket {
+  background-image: url('../src/assets/ticket.svg');
 }
