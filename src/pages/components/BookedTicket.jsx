@@ -49,7 +49,7 @@ const BookedTicket = ( {prevStep, resetForm, step, totalSteps}) => {
         {/* ticket display */}
       <div className='flex flex-col w-full justify-center gap-5'>
         <div>
-        <h2 className='font-[Alatsi] text-[32px] m-4 text-center'>Your Ticket is Booked!</h2>
+        <h2 className='font-[Alatsi] text-2xl md:text-[32px] m-4 text-center'>Your Ticket is Booked!</h2>
         <p className='font-[Roboto] mb-4 text-center'>Check your email for a copy or you can <b>download</b></p>
         </div>
 
@@ -60,7 +60,7 @@ const BookedTicket = ( {prevStep, resetForm, step, totalSteps}) => {
             <div className='flex flex-col gap-2 justify-center items-center border border-btnGreen rounded-2xl mt-2 '>
               {/* heading */}
               <div className='text-center' >
-                <h3  className='font-roadrage md:text-[30px]  text-2xl my-2'>Techember Fest ”25</h3>
+                <h3  className='font-roadrage md:text-[30px]  text-3xl my-2'>Techember Fest ”25</h3>
                 <p className='text-[10px]'>📍 04 Rumens road, Ikoyi, Lagos</p>
                 <p className='text-[10px]'>📅 March 15, 2025 | 7:00 PM</p>
               </div>
@@ -114,7 +114,7 @@ const BookedTicket = ( {prevStep, resetForm, step, totalSteps}) => {
       </div>
 
        {/* Buttons */}
-       <div className='flex flex-col md:flex-row justify-between gap-8 mt-4 rounded-3xl font-[Jejumyeongjo]'>
+       <div className='flex flex-col-reverse md:flex-row justify-between gap-3 md:gap-8 mt-4 rounded-3xl font-[Jejumyeongjo]'>
         <Button type="button" className="border border-bgRingGreen text-bgInputLightGreen md:w-[193px] w-full hover:text-white hover:bg-bgInputLightGreen" onClick={resetForm}>
             Book Another Ticket
           </Button>

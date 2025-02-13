@@ -20,7 +20,7 @@ const Homepage = () => {
     setStep(1); // Reset to Step 1
   };
   return (
-    <div className='container w-full w-max-[1200px] min-h-full border-red-600 border-2 m-auto'> 
+    <div className='container w-full w-max-[1200px] min-h-full m-auto p-2'> 
        <Navbar/>
       {step === 1 && <SelectTicket nextStep = {nextStep} step={step} totalSteps={totalSteps}/>}
       {step === 2 && <AttendeeDetails nextStep = {nextStep} prevStep = {prevStep} step={step} totalSteps={totalSteps}/>}

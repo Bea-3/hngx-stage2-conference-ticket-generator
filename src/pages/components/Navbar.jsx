@@ -8,7 +8,7 @@ const Navbar = () => {
     alert('Button clicked!');
   };
   return (
-    <div className='w-full max-w-[1200px] mt-5 p-2 border-1 border-bgRingGreen m-auto rounded-2xl'>
+    <div className='w-full max-w-[1200px] mt-5 p-2 border-1 border-bgRingGreen m-auto rounded-lg md:rounded-2xl '>
       <nav className='font-jeju w-full flex  justify-between items-center'>
         {/* logo */}
         <img src={logo} alt="Ticz logo" />

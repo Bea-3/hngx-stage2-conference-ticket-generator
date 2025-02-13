@@ -141,7 +141,7 @@ const AttendeeDetails = ({ nextStep, prevStep, step, totalSteps }) => {
           <div
           onDrop={handleDrop}
           onDragOver={(e) => e.preventDefault()}
-          className="bg-bgDarkgreen p-6 text-center cursor-pointer h-[198px] rounded mb-4"
+          className="md:bg-bgDarkgreen p-6 text-center cursor-pointer h-[198px] rounded md:mb-4 mb-8"
         >
           <input
             type="file"
@@ -152,7 +152,7 @@ const AttendeeDetails = ({ nextStep, prevStep, step, totalSteps }) => {
           />
           <label
             htmlFor="fileUpload"
-            className="flex  text-white p-2 rounded-3xl border-4 border-btnGreen w-[230px] h-[230px] absolute top-14 right-42 justify-center items-center "
+            className="flex  text-white p-2 rounded-3xl border-4 border-btnGreen w-[230px] h-[230px] absolute md:top-14 md:right-42 justify-center items-center top-18 right-5"
           >
             {uploading ? "Uploading..." : "Drag & Drop your image here or click to upload"}
           </label>
@@ -163,7 +163,7 @@ const AttendeeDetails = ({ nextStep, prevStep, step, totalSteps }) => {
             <img
               src={formData.avatar}
               alt="Avatar Uploaded"
-              className="w-[230px] h-[230px] object-cover absolute rounded-2xl top-14 right-42 bg-white"
+              className="w-[230px] h-[230px] object-cover absolute rounded-2xl md:top-14 md:right-42 bg-white top-18 right-5 "
             />
           )}
         </div>
@@ -195,7 +195,7 @@ const AttendeeDetails = ({ nextStep, prevStep, step, totalSteps }) => {
     <img 
       src={envelopeIcon} 
       alt="envelope icon" 
-      className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white"
+      className="absolute left-3 top-7.5 md:top-7 transform -translate-y-1/2 w-5 h-5 text-white"
     />
 
     {/* Input Field */}
@@ -229,17 +229,17 @@ const AttendeeDetails = ({ nextStep, prevStep, step, totalSteps }) => {
         </div>
 
         {/* buttons */}
-        <div className="flex justify-center gap-8 mt-4 font-jeju">
+        <div className="flex flex-col-reverse md:flex-row justify-center gap-3 md:gap-8 mt-4 font-jeju">
           <Button
             type="button"
             onClick={prevStep}
-            className="border border-bgRingGreen text-bgInputLightGreen w-[270px]"
+            className="border border-bgRingGreen text-bgInputLightGreen w-[270px] hover:text-white hover:bg-bgHover"
           >
             Back
           </Button>
           <Button
             type="submit"
-            className="border border-bgRingGreen text-bgInputLightGreen hover:text-white hover:bg-bgInputLightGreen hover:border-0  w-[270px]"
+            className="border border-bgRingGreen text-bgInputLightGreen hover:text-white hover:bg-bgHover hover:border-0  w-[270px]"
           >
             Get My Free Ticket
           </Button>
