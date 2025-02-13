@@ -47,14 +47,14 @@ const BookedTicket = ( {prevStep, resetForm, step, totalSteps}) => {
   return (
     <StepsContainer title="Ready" step={step} totalSteps={totalSteps}>
         {/* ticket display */}
-      <div className='border border-white flex flex-col w-full justify-center gap-5'>
+      <div className='flex flex-col w-full justify-center gap-5'>
         <div>
-        <h2 className='font-[Alatsi] text-[32px] m-3 text-center'>Your Ticket is Booked!</h2>
+        <h2 className='font-[Alatsi] text-[32px] m-4 text-center'>Your Ticket is Booked!</h2>
         <p className='font-[Roboto] mb-4 text-center'>Check your email for a copy or you can <b>download</b></p>
         </div>
 
         {/* Ticket with details */}
-      <div className=' border border-amber-600  flex justify-center content-center'>
+      <div className=' flex justify-center content-center'>
         {/* ticket container with the downloable ticket */}
         <div ref={ticketRef} className='w-[300px] h-[600px] p-4 ticket bg-cover bg-center'>
             <div className='flex flex-col gap-2 justify-center items-center border border-btnGreen rounded-2xl mt-2 '>
@@ -71,7 +71,7 @@ const BookedTicket = ( {prevStep, resetForm, step, totalSteps}) => {
               </div>
 
               {/* User Info */}
-              <div className='grid grid-cols-2 w-[235px] border border-bgdarkBorder gap-0 p-1 rounded-xl mb-4'>
+              <div className='grid grid-cols-2 w-[235px] border border-bgdarkBorder bg-bgUserInfo gap-0 p-1 rounded-xl mb-4'>
                 <div className='w-full h-[45px] border-b-1 border-r-1 border-bgdarkBorder flex flex-col gap-2 px-2'>
                   <h5 className='text-[10px] opacity-50'>Enter your name</h5>
                   <p className='text-xs font-bold'>{attendeeDetails.fullName}</p>
@@ -114,11 +114,11 @@ const BookedTicket = ( {prevStep, resetForm, step, totalSteps}) => {
       </div>
 
        {/* Buttons */}
-       <div className='flex justify-center gap-8 mt-4 rounded-3xl border-1 border-bgLightGreen font-[Jejumyeongjo]'>
-        <Button type="button" className="border border-bgRingGreen text-bgInputLightGreen md:w-[214px] w-full hover:text-white hover:bg-bgInputLightGreen" onClick={resetForm}>
+       <div className='flex flex-col md:flex-row justify-between gap-8 mt-4 rounded-3xl font-[Jejumyeongjo]'>
+        <Button type="button" className="border border-bgRingGreen text-bgInputLightGreen md:w-[193px] w-full hover:text-white hover:bg-bgInputLightGreen" onClick={resetForm}>
             Book Another Ticket
           </Button>
-          <Button type="button" className="border border-bgRingGreen text-bgInputLightGreen md:w-[214px] w-full hover:text-white hover:bg-bgInputLightGreen hover:border-0" onClick={handleDownload}>
+          <Button type="button" className="border border-bgRingGreen text-bgInputLightGreen md:w-[387px] w-full hover:text-white hover:bg-bgInputLightGreen hover:border-0" onClick={handleDownload}>
             Download Ticket
           </Button>
           
