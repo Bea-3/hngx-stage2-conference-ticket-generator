@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react'
 import { StepsContainer } from './StepsContainer';
 import { Button } from './utils/Button';
-import Barcode from 'react-barcode';
+// import Barcode from 'react-barcode';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 
@@ -97,7 +97,7 @@ const BookedTicket = ( {prevStep, resetForm, step, totalSteps}) => {
 
             {/* Barcode */}
             <div className='mt-14 flex justify-center items-center '>
-            <Barcode
+            {/* <Barcode
                 value="123456789" // Unique value for the barcode
                 format="CODE39" // Barcode format
                 width={1.2} // Width of the barcode
@@ -108,7 +108,7 @@ const BookedTicket = ( {prevStep, resetForm, step, totalSteps}) => {
                 lineColor="#fff"
                 background="none"
                 textAlign='center'
-              />
+              /> */}
             </div>
         </div>
       </div>
