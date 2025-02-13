@@ -16,20 +16,22 @@ export const TicketOptions = ({ setSelectedTicket} ) => {
   };
 
   return (
-    <div className='border-1 border-bgLightGreen p-4 rounded-3xl flex flex-wrap gap-6 mt-2'>
+    <div className='border-1 border-bgLightGreen p-4 rounded-3xl flex justify-between mt-2'>
       {/* 3 cards with the ticket types */}
       { ticketType.map( (ticket) => (
         <button type='button'
         key={ticket.type}
         onClick={() => handleSelect(ticket)}
-        className={`border-1 border-bgLightGreen flex p-2 w-[242px] gap-2  ${ selected === ticket.type ? 'bg-bgRingGreen' : 'bg-inherit'} rounded-2xl justify-between items-start active:bg-bgRingGreen`}>
+        className={`border-1 border-bgLightGreen p-3 w-[160px] ${ selected === ticket.type ? 'bg-bgRingGreen' : 'bg-inherit'} rounded-2xl active:bg-bgRingGreen`}>
         <div className='flex flex-col gap-2 text-start'>
-          <h3>{ticket.type} <span>ACCESS</span></h3>
-          <p><span>{ticket.ticketsLeft}</span> left!</p>
+        <p className='font-semibold text-xl'>{ticket.price}</p>
+        <div>
+        <h3>{ticket.type} <span>ACCESS</span></h3>
+        <p><span>{ticket.ticketsLeft}</span> /52</p>
         </div>
-        <div className='w-[80px] flex justify-end border-1 p-1 border-bgRingGreen items-center rounded-lg font-semibold text-xl bg-bgLightGreen'>
-          <span>{ticket.price}</span>
+         
         </div>
+        
       </button>
       ))}
     </div>

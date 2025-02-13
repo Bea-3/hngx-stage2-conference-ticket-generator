@@ -83,9 +83,9 @@ const SelectTicket = ( { nextStep, step, totalSteps }) => {
         <form onSubmit={handleSubmit} className='bg-formBg border-1 border-bgLightGreen rounded-3xl p-6 my-7'>
           {/* heading */}
           <div className='bg-formHeadingBg border-1 border-bgLightGreen rounded-3xl text-center mb-4 p-1'>
-            <h2 className='font-[RoadRage] text-6xl my-2'>Techember Fest ”25</h2>
-            <p className='font-[Roboto] my-2'>Join us for an unforgettable experience at <br/>[Event Name]! Secure your spot now.</p>
-            <div className='font-[Roboto] flex justify-center items-center gap-3 my-3'>
+            <h2 className='font-roadrage text-6xl my-2'>Techember Fest ”25</h2>
+            <p className='my-2'>Join us for an unforgettable experience at <br/>[Event Name]! Secure your spot now.</p>
+            <div className='flex justify-center items-center gap-3 my-3'>
               <div className='flex gap-2'>
                
                 <p>📍 [Event Location]</p>
@@ -113,23 +113,24 @@ const SelectTicket = ( { nextStep, step, totalSteps }) => {
           <div className='mt-3 mb-8'>
           <p>Number of Tickets</p>
           <select name="" id="" value={formData.ticketCount} onChange={handleTicketCountChange}
-          className='w-full bg-inherit border-1 border-bgLightGreen p-3 rounded-xl mt-2'
+          className='w-full bg-inherit border-1 border-bgLightGreen p-3 rounded-xl mt-2 px-4
+          '
           >
-            <option value="">Select</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
+            <option className="bg-formHeadingBg hover:bg-formHeadingBg focus:bg-formHeadingBg" value="">Select</option>
+            <option className="bg-formHeadingBg" value="1">1</option>
+            <option className="bg-formHeadingBg" value="2">2</option>
           </select>
           </div>
 
          
 
-        <div className='flex justify-center gap-8 mt-4 rounded-3xl border-1 border-bgLightGreen font-[Jejumyeongjo]'>
+        <div className='flex justify-between gap-8 mt-4 rounded-3xl font-jeju'>
           {/* on cancel, clear the form data */}
-        <Button type="button" className='border-2 border-bgRingGreen text-bgInputLightGreen md:w-[214px] w-full'  onClick={handleCancel}>Cancel</Button>
-        <Button type= "submit"  className={`border-2 border-bgRingGreen md:w-[214px] w-full ${
+        <Button type="button" className='border-1 border-bgRingGreen text-bgInputLightGreen md:w-[266px] w-full'  onClick={handleCancel}>Cancel</Button>
+        <Button type= "submit"  className={`border-1 border-bgRingGreen md:w-[266px] w-full ${
               isFormValid 
                 ? 'text-bgInputLightGreen hover:text-white hover:bg-bgInputLightGreen hover:border-0' 
-                : 'text-gray-400 cursor-not-allowed'
+                : 'text-bgInputLightGreen cursor-not-allowed'
             }`}
             disabled={!isFormValid}
         >Next</Button>

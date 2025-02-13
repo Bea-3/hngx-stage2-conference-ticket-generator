@@ -60,7 +60,7 @@ const BookedTicket = ( {prevStep, resetForm, step, totalSteps}) => {
             <div className='flex flex-col gap-2 justify-center items-center border border-btnGreen rounded-2xl mt-2 '>
               {/* heading */}
               <div className='text-center' >
-                <h3  className='font-[RoadRage] md:text-[30px]  text-2xl my-2'>Techember Fest ”25</h3>
+                <h3  className='font-roadrage md:text-[30px]  text-2xl my-2'>Techember Fest ”25</h3>
                 <p className='text-[10px]'>📍 04 Rumens road, Ikoyi, Lagos</p>
                 <p className='text-[10px]'>📅 March 15, 2025 | 7:00 PM</p>
               </div>

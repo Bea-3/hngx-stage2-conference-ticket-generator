@@ -9,12 +9,12 @@ const Navbar = () => {
   };
   return (
     <div className='w-full max-w-[1200px] mt-5 p-2 border-1 border-bgRingGreen m-auto rounded-2xl'>
-      <nav className='font-[Jejumyeongjo] w-full flex  justify-between items-center'>
+      <nav className='font-jeju w-full flex  justify-between items-center'>
         {/* logo */}
         <img src={logo} alt="Ticz logo" />
 
         {/* Nav Links */}
-        <div className='nav-links w-[341px] flex justify-center gap-7 text-lg text-[#B3B3B3]'>
+        <div className='nav-links w-[341px] justify-center gap-7 text-lg text-[#B3B3B3] hidden md:flex'>
           <a href="#" className='text-white'>Events</a>
           <a href="#">My Tickets</a>
           <a href="#">About Project</a>

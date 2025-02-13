@@ -3,6 +3,8 @@ import { useDropzone } from "react-dropzone";
 import { StepsContainer } from "./StepsContainer";
 import { Button } from "./utils/Button";
 import { UploadToCloudinary } from "./utils/UploadToCloudinary";
+import envelopeIcon from "../../assets/icons/envelope.svg";
+import uploadIcon from "../../assets/icons/uploadIcon.svg";
 
 const AttendeeDetails = ({ nextStep, prevStep, step, totalSteps }) => {
   const [formData, setFormData] = useState({
@@ -133,12 +135,14 @@ const AttendeeDetails = ({ nextStep, prevStep, step, totalSteps }) => {
         className="bg-formBg border-1 border-bgLightGreen rounded-3xl p-6 my-7"
       >
         {/* Avatar File Upload / drag and drop*/}
-        <div
+        <div className="border border-bgdarkBorder p-6 rounded-3xl relative mb-4">
+          <h3 className="mb-6">Upload Profile Photo</h3>
+
+          <div
           onDrop={handleDrop}
           onDragOver={(e) => e.preventDefault()}
-          className="border-2 border-dashed p-6 text-center cursor-pointer"
+          className="bg-bgDarkgreen p-6 text-center cursor-pointer h-[198px] rounded mb-4"
         >
-          <p>Drag & Drop your image here or click to upload</p>
           <input
             type="file"
             accept="image/png, image/jpeg, image/gif"
@@ -148,9 +152,9 @@ const AttendeeDetails = ({ nextStep, prevStep, step, totalSteps }) => {
           />
           <label
             htmlFor="fileUpload"
-            className="block mt-2 bg-blue-500 text-white p-2 rounded"
+            className="flex  text-white p-2 rounded-3xl border-4 border-btnGreen w-[230px] h-[230px] absolute top-14 right-42 justify-center items-center "
           >
-            {uploading ? "Uploading..." : "Select File"}
+            {uploading ? "Uploading..." : "Drag & Drop your image here or click to upload"}
           </label>
           {errors.avatar && (
             <p className="text-red-500 text-sm">{errors.avatar}</p>
@@ -159,22 +163,23 @@ const AttendeeDetails = ({ nextStep, prevStep, step, totalSteps }) => {
             <img
               src={formData.avatar}
               alt="Avatar Uploaded"
-              className="mt-4 w-24 h-24 rounded-full object-cover mx-auto bg-white"
+              className="w-[230px] h-[230px] object-cover absolute rounded-2xl top-14 right-42 bg-white"
             />
           )}
+        </div>
         </div>
 
         <hr className="bg-formHeadingBg w-full h-1 border-0 my-7" />
 
         {/* Full name */}
-        <div>
-          <label>Enter your full name</label>
+        <div className="mb-8">
+          <label>Enter your name</label>
           <input
             type="text"
             name="fullName"
             value={formData.fullName}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="w-full p-2 border rounded-lg mt-2 border-bgdarkBorder"
           />
           {errors.fullName && (
             <p className="text-red-500 text-sm">{errors.fullName}</p>
@@ -182,29 +187,41 @@ const AttendeeDetails = ({ nextStep, prevStep, step, totalSteps }) => {
         </div>
 
         {/* Email Field */}
-        <div>
-          <label htmlFor="">Enter your email *</label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="hello@example.com"
-            className="w-full p-2 border rounded"
-          />
-          {errors.email && (
-            <p className="text-red-500 text-sm">{errors.email}</p>
-          )}
-        </div>
+        <div className="w-full mb-8">
+  <label htmlFor="email" className="block mb-1">Enter your email *</label>
+  
+  <div className="relative w-full">
+    {/* Icon inside input */}
+    <img 
+      src={envelopeIcon} 
+      alt="envelope icon" 
+      className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white"
+    />
+
+    {/* Input Field */}
+    <input
+      type="email"
+      name="email"
+      value={formData.email}
+      onChange={handleChange}
+      placeholder="hello@example.com"
+      className="w-full p-2 pl-10 border border-bgdarkBorder rounded-lg focus:ring-0 bg-inherit mt-2"
+    />
+  </div>
+
+  {/* Validation Message */}
+  {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+</div>
+
 
         {/* Text Area */}
-        <div className="mb-4">
-          <label className="block mb-2">About the project</label>
+        <div className="mb-8">
+          <label className="block mb-2">Special request?</label>
           <textarea
             name="textarea"
             value={formData.textarea}
             onChange={handleChange}
-            className="w-full p-2 border rounded min-h-[100px]"
+            className="w-full p-2 border border-bgdarkBorder rounded-lg min-h-[100px]"
           />
           {errors.textarea && (
             <p className="text-red-500 text-sm mt-1">{errors.textarea}</p>
@@ -212,17 +229,17 @@ const AttendeeDetails = ({ nextStep, prevStep, step, totalSteps }) => {
         </div>
 
         {/* buttons */}
-        <div className="flex justify-center gap-8 mt-4 font-[Jejumyeongjo]">
+        <div className="flex justify-center gap-8 mt-4 font-jeju">
           <Button
             type="button"
             onClick={prevStep}
-            className="border-2 border-bgRingGreen text-bgInputLightGreen"
+            className="border border-bgRingGreen text-bgInputLightGreen w-[270px]"
           >
             Back
           </Button>
           <Button
             type="submit"
-            className="border-2 border-bgRingGreen text-bgInputLightGreen hover:text-white hover:bg-bgInputLightGreen hover:border-0"
+            className="border border-bgRingGreen text-bgInputLightGreen hover:text-white hover:bg-bgInputLightGreen hover:border-0  w-[270px]"
           >
             Get My Free Ticket
           </Button>

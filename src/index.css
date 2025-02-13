@@ -14,6 +14,8 @@
   --color-formHeadingBg: #07373F;
   --color-bgdarkBorder:#133D44;
   --color-bgUserInfo:#08343C;
+  --font-roadrage: "Road Rage", serif; 
+  --font-jeju:"JejuMyeongjo, sans serif"
 }
 
 * {
@@ -21,7 +23,7 @@
 }
 
 :root {
-  font-family: Roboto, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-optical-sizing: auto;
   font-synthesis: none;
@@ -33,7 +35,8 @@
 
 
 body {
-  margin: 0 auto;
+  margin: 0;
+  padding: auto;
   background-color: #02191D;
   color:white;
 }
