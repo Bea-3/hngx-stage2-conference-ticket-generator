@@ -82,7 +82,7 @@ const SelectTicket = ( { nextStep, step, totalSteps }) => {
     <StepsContainer title="Ticket Selection" step={step} totalSteps={totalSteps}>
         <form onSubmit={handleSubmit} className='bg-formBg border-1 border-bgLightGreen rounded-3xl p-6 my-7'>
           {/* heading */}
-          <div className='bg-formHeadingBg border-1 border-bgLightGreen rounded-3xl text-center mb-4 p-1'>
+          <div className='bg-formHeadingBg border-1 border-bgLightGreen rounded-3xl text-center mb-4 p-1 bg-gradient'>
             <h2 className='font-roadrage text-5xl md:text-6xl my-2'>Techember Fest ”25</h2>
             <p className=' md:text-base text-xs my-2'>Join us for an unforgettable experience at <br/>[Event Name]! Secure your spot now.</p>
             <div className='flex flex-col md:flex-row justify-center items-center gap-3 my-3 text-xs md:text-base'>
