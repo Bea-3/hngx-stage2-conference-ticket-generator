@@ -72,25 +72,25 @@ const BookedTicket = ( {prevStep, resetForm, step, totalSteps}) => {
 
               {/* User Info */}
               <div className='grid grid-cols-2 w-[235px] border border-bgdarkBorder bg-bgUserInfo gap-0 p-1 rounded-xl mb-4'>
-                <div className='w-full h-[45px] border-b-1 border-r-1 border-bgdarkBorder flex flex-col gap-2 px-2'>
+                <div className='w-full h-[55px] border-b-1 border-r-1 border-bgdarkBorder p-1 flex flex-col gap-1'>
                   <h5 className='text-[8px] opacity-50'>Enter your name</h5>
-                  <p className='text-[10px] font-bold'>{attendeeDetails.fullName}</p>
+                  <p className='text-[10px] font-bold truncate'>{attendeeDetails.fullName}</p>
                 </div>
-                <div className='w-full h-[45px] border-b-1 border-bgdarkBorder flex flex-col gap-2 px-2'>
-                  <h5 className='text-[8px] opacity-50'>Enter your email *</h5>
-                  <p className='text-[10px] font-bold'>{attendeeDetails.email}</p>
+                <div className='w-full h-[55px] border-b-1 border-bgdarkBorder p-1 flex flex-col gap-1'>
+                  <h5 className='text-[8px] opacity-50 ml-1'>Enter your email *</h5>
+                  <p className='text-[10px] font-bold break-words ml-1'>{attendeeDetails.email}</p>
                 </div>
-                <div className='w-full h-[45px] border-b-1 border-r-1 border-bgdarkBorder flex flex-col gap-2 px-2'>
+                <div className='w-full h-[55px] border-b-1 border-r-1 border-bgdarkBorder flex flex-col gap-1 p-1'>
                   <h5 className='text-[8px] opacity-50'>Ticket Type:</h5>
                   <p className='text-[10px] font-bold'>{selectedTicket.type}</p>
                 </div>
-                <div className='w-full h-[45px] border-b-1 border-bgdarkBorder  flex flex-col gap-2 px-2'>
-                  <h5 className='text-[10px] opacity-50'>Ticket for:</h5>
-                  <p className='text-[10px] font-bold'>{ticketCount}</p>
+                <div className='w-full h-[55px] border-b-1 border-bgdarkBorder  flex flex-col gap-1 p-1'>
+                  <h5 className='text-[10px] opacity-50 ml-1'>Ticket for:</h5>
+                  <p className='text-[10px] font-bold ml-1'>{ticketCount}</p>
                 </div>
                 <div className='col-span-2 w-full h-[60px] border-bgdarkBorder flex flex-col gap-1 p-2'>
                   <h5 className='text-[10px] opacity-50'>Special request?</h5>
-                  <p className='text-[10px] font-bold'>{attendeeDetails.textarea}</p>
+                  <p className='text-[10px] font-bold truncate'>{attendeeDetails.textarea}</p>
                 </div>                
               </div>
             </div>

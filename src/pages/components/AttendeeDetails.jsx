@@ -141,8 +141,9 @@ const AttendeeDetails = ({ nextStep, prevStep, step, totalSteps }) => {
           <div
           onDrop={handleDrop}
           onDragOver={(e) => e.preventDefault()}
-          className="md:bg-bgDarkgreen p-6 text-center cursor-pointer h-[198px] rounded md:mb-4 mb-8"
+          className="md:bg-bgDarkgreen p-6 text-center cursor-pointer h-[198px] rounded md:mb-4 mb-8 top-18 right-5"
         >
+          <img src={uploadIcon} alt="Upload Icon " className="absolute md:top-30 md:left-70 z-50"/>
           <input
             type="file"
             accept="image/png, image/jpeg, image/gif"
@@ -152,7 +153,7 @@ const AttendeeDetails = ({ nextStep, prevStep, step, totalSteps }) => {
           />
           <label
             htmlFor="fileUpload"
-            className="flex  text-white p-2 rounded-3xl border-4 border-btnGreen w-[230px] h-[230px] absolute md:top-14 md:right-42 justify-center items-center top-18 right-5"
+            className="flex  text-white p-2 rounded-3xl border-4 border-btnGreen w-[230px] h-[230px] absolute md:top-14 md:right-42 justify-center items-center top-18 right-5 bg-bgLightGreen text-base opacity-90"
           >
             {uploading ? "Uploading..." : "Drag & Drop your image here or click to upload"}
           </label>
@@ -163,7 +164,7 @@ const AttendeeDetails = ({ nextStep, prevStep, step, totalSteps }) => {
             <img
               src={formData.avatar}
               alt="Avatar Uploaded"
-              className="w-[230px] h-[230px] object-cover absolute rounded-2xl md:top-14 md:right-42 bg-white top-18 right-5 "
+              className="w-[230px] h-[230px] object-cover absolute rounded-2xl md:top-14 md:right-42 bg-white top-18 right-5 z-500 opacity-96 hover:opacity-100"
             />
           )}
         </div>
