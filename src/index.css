@@ -38,8 +38,9 @@
 body {
   margin: 0;
   padding: auto;
-  background-color: #02191D;
+  /* background-color: #041E23; */
   color:white;
+  background: radial-gradient(52.52% 32.71% at 50% 97.66%, rgba(36, 160, 181, 0.20) 0%, rgba(36, 160, 181, 0.00) 100%), #02191D;
 }
 
 a {
@@ -48,4 +49,11 @@ a {
 
 .ticket {
   background-image: url('../src/assets/ticket.svg');
+}
+.bg-gradient {
+  background-image: radial-gradient(circle at top left,
+  rgba(36, 160, 181, 0.2) 4%,    /* #24A0B5 dimmed to 20% */
+  rgba(7, 55, 63, 0.8) 70%,      /* #07373F at 80% opacity */
+  rgba(10, 12, 17, 1) 100%       /* #0A0C11 full opacity */
+);
 }
