@@ -246,13 +246,13 @@ const AttendeeDetails = ({ nextStep, prevStep, step, totalSteps }) => {
           <Button
             type="button"
             onClick={prevStep}
-            className="border border-bgRingGreen text-bgInputLightGreen w-[270px] hover:text-white hover:bg-bgHover"
+            className="border border-bgRingGreen text-bgInputLightGreen w-[270px]  hover:text-white hover:bg-bgInputLightGreen"
           >
             Back
           </Button>
           <Button
             type="submit"
-            className="border border-bgRingGreen text-bgInputLightGreen hover:text-white hover:bg-bgHover hover:border-0  w-[270px]"
+            className="border border-bgRingGreen text-bgInputLightGreen  hover:text-white hover:bg-bgInputLightGreen hover:border-0  w-[270px]"
           >
             Get My Free Ticket
           </Button>
