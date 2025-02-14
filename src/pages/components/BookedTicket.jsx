@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react'
 import { StepsContainer } from './StepsContainer';
 import { Button } from './utils/Button';
-// import Barcode from 'react-barcode';
+import Barcode from 'react-barcode';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 
@@ -73,31 +73,31 @@ const BookedTicket = ( {prevStep, resetForm, step, totalSteps}) => {
               {/* User Info */}
               <div className='grid grid-cols-2 w-[235px] border border-bgdarkBorder bg-bgUserInfo gap-0 p-1 rounded-xl mb-4'>
                 <div className='w-full h-[45px] border-b-1 border-r-1 border-bgdarkBorder flex flex-col gap-2 px-2'>
-                  <h5 className='text-[10px] opacity-50'>Enter your name</h5>
-                  <p className='text-xs font-bold'>{attendeeDetails.fullName}</p>
+                  <h5 className='text-[8px] opacity-50'>Enter your name</h5>
+                  <p className='text-[10px] font-bold'>{attendeeDetails.fullName}</p>
                 </div>
                 <div className='w-full h-[45px] border-b-1 border-bgdarkBorder flex flex-col gap-2 px-2'>
-                  <h5 className='text-[10px] opacity-50'>Enter your email *</h5>
-                  <p className='text-[11px] font-bold'>{attendeeDetails.email}</p>
+                  <h5 className='text-[8px] opacity-50'>Enter your email *</h5>
+                  <p className='text-[10px] font-bold'>{attendeeDetails.email}</p>
                 </div>
                 <div className='w-full h-[45px] border-b-1 border-r-1 border-bgdarkBorder flex flex-col gap-2 px-2'>
-                  <h5 className='text-[10px] opacity-50'>Ticket Type:</h5>
-                  <p className='text-xs font-bold'>{selectedTicket.type}</p>
+                  <h5 className='text-[8px] opacity-50'>Ticket Type:</h5>
+                  <p className='text-[10px] font-bold'>{selectedTicket.type}</p>
                 </div>
                 <div className='w-full h-[45px] border-b-1 border-bgdarkBorder  flex flex-col gap-2 px-2'>
                   <h5 className='text-[10px] opacity-50'>Ticket for:</h5>
-                  <p className='text-xs font-bold'>{ticketCount}</p>
+                  <p className='text-[10px] font-bold'>{ticketCount}</p>
                 </div>
                 <div className='col-span-2 w-full h-[60px] border-bgdarkBorder flex flex-col gap-1 p-2'>
                   <h5 className='text-[10px] opacity-50'>Special request?</h5>
-                  <p className='text-xs font-bold'>{attendeeDetails.textarea}</p>
+                  <p className='text-[10px] font-bold'>{attendeeDetails.textarea}</p>
                 </div>                
               </div>
             </div>
 
             {/* Barcode */}
             <div className='mt-14 flex justify-center items-center '>
-            {/* <Barcode
+            <Barcode
                 value="123456789" // Unique value for the barcode
                 format="CODE39" // Barcode format
                 width={1.2} // Width of the barcode
@@ -108,7 +108,7 @@ const BookedTicket = ( {prevStep, resetForm, step, totalSteps}) => {
                 lineColor="#fff"
                 background="none"
                 textAlign='center'
-              /> */}
+              />
             </div>
         </div>
       </div>
