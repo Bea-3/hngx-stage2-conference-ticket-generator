@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
-import { useDropzone } from "react-dropzone";
+import React, { useState, useEffect } from "react";
 import { StepsContainer } from "./StepsContainer";
 import { Button } from "./utils/Button";
 import { UploadToCloudinary } from "./utils/UploadToCloudinary";
@@ -59,7 +58,6 @@ const AttendeeDetails = ({ nextStep, prevStep, step, totalSteps }) => {
       newErrors.avatar = "Profile photo is required";
     }
 
-    // Optional textarea validation
     if (formData.textarea.trim().length > 500) {
       newErrors.textarea = "Project description cannot exceed 500 characters.";
     }
@@ -141,7 +139,9 @@ const AttendeeDetails = ({ nextStep, prevStep, step, totalSteps }) => {
           <div
           onDrop={handleDrop}
           onDragOver={(e) => e.preventDefault()}
+          tabIndex="0"
           className="md:bg-bgDarkgreen p-6 text-center cursor-pointer h-[198px] rounded md:mb-4 mb-8 top-18 right-5"
+          aria-label="Drag and drop or click to upload an image"
         >
           <img src={uploadIcon} alt="Upload Icon " className="absolute md:top-30 md:left-70 z-50"/>
           <input
@@ -181,6 +181,7 @@ const AttendeeDetails = ({ nextStep, prevStep, step, totalSteps }) => {
             value={formData.fullName}
             onChange={handleChange}
             className="w-full p-2 border rounded-lg mt-2 border-bgdarkBorder"
+            aria-required="true"
           />
           {errors.fullName && (
             <p className="text-red-500 text-sm">{errors.fullName}</p>
@@ -197,6 +198,7 @@ const AttendeeDetails = ({ nextStep, prevStep, step, totalSteps }) => {
       src={envelopeIcon} 
       alt="envelope icon" 
       className="absolute left-3 top-7.5 md:top-7 transform -translate-y-1/2 w-5 h-5 text-white"
+     
     />
 
     {/* Input Field */}
@@ -207,6 +209,7 @@ const AttendeeDetails = ({ nextStep, prevStep, step, totalSteps }) => {
       onChange={handleChange}
       placeholder="hello@example.com"
       className="w-full p-2 pl-10 border border-bgdarkBorder rounded-lg focus:ring-0 bg-inherit mt-2"
+      aria-required="true"
     />
   </div>
 
@@ -223,6 +226,7 @@ const AttendeeDetails = ({ nextStep, prevStep, step, totalSteps }) => {
             value={formData.textarea}
             onChange={handleChange}
             className="w-full p-2 border border-bgdarkBorder rounded-lg min-h-[100px]"
+            aria-describedby="textarea"
           />
           {errors.textarea && (
             <p className="text-red-500 text-sm mt-1">{errors.textarea}</p>
